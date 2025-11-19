@@ -1,3 +1,25 @@
 background{
     color: black;
 }
+
+
+.intestazione-bianco{
+    color: white;
+    font-weight: bold;
+    font-family: 'Oswald', sans-serif;
+    text-transform: uppercase;
+}
+
+.intestazione-giallo{
+    color: #f4c269;
+    font-weight: 700;
+    font-family: 'Oswald', sans-serif;
+    text-transform: uppercase;
+}
+
+.intestazione-sub{
+    color: white;
+    font-family: 'Oswald', sans-serif;
+    font-weight: 300;
+    letter-spacing: 0.5vw;
+}
