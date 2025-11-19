@@ -1,0 +1,26 @@
+{
+  "name": "g-officina-fitness",
+  "version": "1.0.0",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/RiccardoAccatino/G-Officina-Fitness.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/RiccardoAccatino/G-Officina-Fitness/issues"
+  },
+  "homepage": "https://github.com/RiccardoAccatino/G-Officina-Fitness#readme",
+  "description": "",
+  "dependencies": {
+    "dotenv": "^17.2.3",
+    "ejs": "^3.1.10",
+    "express": "^5.1.0"
+  }
+}
