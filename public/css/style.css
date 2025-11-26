@@ -281,7 +281,34 @@
 .owl-dot.active span {
     background: #f4c269 !important;
 }
-
+/* Stile per il contenitore del prezzo vecchio */
+.pi-price span.old-price {
+    color: #888888;           /* Colore grigio */
+    font-size: 20px;          /* Dimensione ridotta */
+    font-weight: 400;
+    position: relative;       /* Necessario per posizionare la riga sopra */
+    display: inline-block;    /* FONDAMENTALE: la riga sarà lunga quanto il testo */
+    margin-bottom: 0;
+    
+    /* Rimuoviamo la cancellatura standard se l'avevi messa */
+    text-decoration: none;    
+}
+.pi-price span.old-price::before {
+    content: "";              /* Crea un elemento vuoto */
+    position: absolute;       /* Lo posiziona liberamente sopra il testo */
+    
+    /* Posizionamento e dimensioni */
+    width: 110%;              /* Lunghezza: il 110% della larghezza del testo */
+    height: 2px;              /* Spessore della riga */
+    top: 50%;                 /* Posizionato a metà altezza */
+    left: -5%;                /* Spostato leggermente a sinistra per centrarlo */
+    
+    background-color: #f4c269; /* Colore della riga (Arancione del tuo tema) */
+    /* Oppure usa #888888 se la vuoi grigia come il testo */
+    
+    /* Rotazione */
+    transform: rotate(-15deg); /* Ruota la riga di -15 gradi (puoi cambiare questo valore) */
+}
 /* Adattamento mobile per le frecce */
 @media (max-width: 768px) {
     .owl-carousel .owl-nav button.owl-prev { left: 0; }
