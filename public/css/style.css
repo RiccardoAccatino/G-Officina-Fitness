@@ -84,6 +84,62 @@
 }
 
 
+
+/*--- ChoseUs Section ---*/
+
+.choseus-section {
+	background: #0a0a0a;
+	padding-bottom: 70px;
+}
+
+.cs-item {
+	text-align: center;
+	margin-bottom: 30px;
+}
+
+.cs-item:hover span {
+	background: #f4c269;
+	color: #ffffff;
+}
+
+.cs-item span {
+	height: 90px;
+	width: 90px;
+	background: rgba(255, 255, 255, 0.1);
+	border-radius: 50%;
+	display: inline-block;
+	color: #f4c269;
+	line-height: 90px;
+	text-align: center;
+	-webkit-transition: all 0.3s;
+	-o-transition: all 0.3s;
+	transition: all 0.3s;
+}
+
+.cs-item h4 {
+	color: #ffffff;
+	font-size: 22px;
+	font-weight: 600;
+	margin-top: 24px;
+	margin-bottom: 16px;
+    font-family: "Oswald", sans-serif;
+    font-weight: 700;
+}
+
+.cs-title{
+    text-align: center;
+    color: #ffffff;
+    font-family: "Oswald", sans-serif;
+    font-weight: 700;
+
+}
+
+.cs-title span{
+    color: #f4c269;
+}
+
+
+
 /* --- MEDIA QUERIES PER MOBILE --- */
 
 @media (max-width: 991px) {
