@@ -1,25 +1,124 @@
-background{
-    color: black;
+/* Importiamo i font usati nel template */
+@import url('https://fonts.googleapis.com/css?family=Muli:300,400,500,600,700,800,900&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Oswald:300,400,500,600,700&display=swap');
+
+/* --- INIZIO STILE HERO --- */
+
+.hero-section {
+    /* Immagine di sfondo */
+    background-image: url('/img/Palestra/IMG_1913.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    
+    /* ALTEZZA MAGGIORATA: 150vh significa 1.5 volte l'altezza dello schermo.
+       Questo crea lo spazio per lo scorrimento mentre il testo sta fermo. */
+    height: 300vh; 
+    width: 100%;
+    
+    /* Necessario per il posizionamento del velo scuro */
+    position: relative; 
 }
 
-
-.intestazione-bianco{
-    color: white;
-    font-weight: bold;
-    font-family: 'Oswald', sans-serif;
-    text-transform: uppercase;
+/* Il velo scuro sopra l'immagine */
+.hero-section::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.3);
+    z-index: 1;
 }
 
-.intestazione-giallo{
+/* CONTENITORE ADESIVO (STICKY)
+   Questo blocco rimarrà fisso in alto (top: 0) mentre la sezione scorre */
+.hero-sticky-content {
+    position: -webkit-sticky; /* Per compatibilità Safari */
+    position: sticky;
+    top: 0;
+    
+    /* Occupa tutta l'altezza della finestra per centrare il contenuto */
+    height: 100vh; 
+    
+    /* Flexbox per centrare verticalmente il contenuto interno */
+    display: flex;
+    align-items: center;
+    
+    /* Assicura che stia sopra il velo scuro */
+    z-index: 2; 
+    width: 100%;
+}
+
+/* Stile del testo (preso dal tuo template) */
+.hi-text {
+    opacity: 1;
+    transform: translateY(0);
+    transition: all 0.4s;
+}
+
+.hi-text span {
     color: #f4c269;
+    font-size: 16px;
+    font-family: "Oswald", sans-serif;
     font-weight: 700;
-    font-family: 'Oswald', sans-serif;
     text-transform: uppercase;
+    letter-spacing: 4px;
+    display: block;
+    margin-bottom: 10px;
 }
 
-.intestazione-sub{
-    color: white;
-    font-family: 'Oswald', sans-serif;
-    font-weight: 300;
-    letter-spacing: 0.5vw;
+.hi-text h1 {
+    color: #ffffff;
+    font-size: 70px;
+    font-family: "Oswald", sans-serif;
+    font-weight: 700;
+    text-transform: uppercase;
+    line-height: 75px;
+    margin-bottom: 30px;
+}
+
+.hi-text h1 strong {
+    color: #f4c269;
+}
+
+
+/* --- MEDIA QUERIES PER MOBILE --- */
+
+@media (max-width: 991px) {
+    /* Regole per Tablet e Mobile orizzontale */
+    .hi-text {
+        text-align: center;
+        margin-bottom: 30px;
+    }
+
+    .hi-text h1 {
+        font-size: 48px;
+        line-height: 55px;
+    }
+    
+    /* Riduciamo un po' anche qui (opzionale) */
+    .hi-text span {
+        font-size: 14px; 
+    }
+}
+
+@media (max-width: 576px) {
+    /* Regole per Smartphone verticali */
+    .hero-section {
+        height: 120vh; 
+    }
+    
+    .hi-text h1 {
+        font-size: 36px;
+        line-height: 45px;
+    }
+    
+    /* QUI MODIFICHI LA GRANDEZZA DELLA SCRITTA "100% Elite..." */
+    .hi-text span {
+        font-size: 12px;  /* Molto più piccola (standard è 16px) */
+        letter-spacing: 2px; /* Riduciamo leggermente la spaziatura lettere */
+        margin-bottom: 5px; /* Meno spazio sotto la scritta */
+    }
 }
