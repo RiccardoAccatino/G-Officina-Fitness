@@ -315,12 +315,27 @@
     .owl-carousel .owl-nav button.owl-next { right: 0; }
 }
 
-/* Rende la navbar fissa un po' più leggibile se l'immagine sotto è troppo chiara */
+/* La navbar fissa in partenza è trasparente con una leggera sfumatura per leggerezza */
 .navbar.fixed-top {
-    background: linear-gradient(to bottom, rgba(0,0,0,0.8), transparent);
-    transition: background 0.3s ease-in-out;
+    transition: background-color 0.3s ease-in-out, box-shadow 0.3s ease-in-out, padding 0.3s ease;
+    background: linear-gradient(to bottom, rgba(0,0,0,0.6), transparent);
+    padding: 20px 0; /* Spaziatura iniziale un po' più ampia */
 }
 
+/* 3. CLASSE PER QUANDO SI SCORRE (DOPO LA HERO) */
+.navbar.scrolled {
+    background-color: #0a0a0a !important; /* Sfondo solido molto scuro */
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.8); /* Ombreggiatura forte */
+    padding: 10px 0; /* La navbar si rimpicciolisce leggermente per eleganza */
+}
+
+/* Assicuriamoci che su mobile le icone abbiano spazio verticale se vanno a capo */
+@media (max-width: 991px) {
+    .custom-icons-nav {
+        margin-top: 15px;
+        justify-content: center; /* Centra le icone su mobile */
+    }
+}
 /* Opzionale: se vuoi che diventi nera quando scorri nella Home, 
    servirebbe un piccolo script JS, ma per ora lasciamola trasparente */
 .nv-s{
@@ -328,6 +343,8 @@
     font-family: "Oswald", sans-serif;
     font-weight: 700;
     color: #ffffff;
+    font-size: larger;
+    
 }
 
 .nv-s:hover{

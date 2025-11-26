@@ -13,4 +13,29 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css">
     <link rel="stylesheet" href="/css/style.css">
+<script>
+    // Script per cambiare la navbar quando si scorre
+    window.addEventListener('scroll', function() {
+        const navbar = document.querySelector('.navbar');
+        const heroSection = document.querySelector('.hero-section');
+        
+        // Valore di default (per le pagine senza Hero, es. Chi Siamo)
+        let triggerHeight = 50; 
+
+        if (heroSection) {
+            // SE siamo in Home (c'è la Hero Section):
+            // La navbar diventa nera solo quando abbiamo scrollato via tutta l'immagine.
+            // heroSection.offsetHeight è l'altezza totale dell'immagine/sezione.
+            // Togliamo 100px per far avvenire il cambio un attimo prima che finisca, per un effetto più fluido.
+            triggerHeight = heroSection.offsetHeight - 100; 
+        }
+
+        // Se abbiamo superato l'altezza stabilita, aggiungi la classe 'scrolled' (sfondo nero)
+        if (window.scrollY > triggerHeight) {
+            navbar.classList.add('scrolled');
+        } else {
+            navbar.classList.remove('scrolled');
+        }
+    });
+</script>
 </head>
