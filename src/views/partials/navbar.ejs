@@ -2,21 +2,22 @@
 <html lang="it">
 <%- include('../layouts/main') %>
 <body>
-    <nav class="navbar navbar-expand-lg navbar-dark <%= (typeof isHome !== 'undefined' && isHome) ? 'fixed-top' : 'bg-dark' %>">
+<nav class="navbar navbar-expand-lg navbar-dark <%= (typeof isHome !== 'undefined' && isHome) ? 'fixed-top' : 'bg-dark sticky-top' %>">
     <div class="container">
-        
         <a class="navbar-brand d-flex align-items-center" href="/">
-            <img src="/img/Logo/Logo bianco.png" alt="Logo" height="100" class="me-2">
-            
+            <img src="/img/Logo/Logo bianco.png" alt="Logo" height="80" class="me-2"> 
         </a>
+        
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav ms-auto">
-                    <li class="nav-item"><a class="nav-link" href="/">Home</a></li>
-                    <li class="nav-item"><a class="nav-link" href="/corsi">Corsi</a></li>
-                </ul>
-            </div>
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ms-auto">
+                <li class="nav-item"><a class="nav-link nv-s" href="/">Home</a></li>
+                <li class="nav-item"><a class="nav-link nv-s" href="/corsi">Chi Siamo</a></li>
+                <li class="nav-item"><a class="nav-link nv-s" href="/corsi">Contattaci</a></li>
+            </ul>
         </div>
-    </nav>
+    </div>
+</nav>
