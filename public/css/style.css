@@ -350,6 +350,32 @@
 .nv-s:hover{
     color: #f4c269;
 }
+
+/* --- GALLERY SECTION --- */
+.gallery-section {
+    background: #0a0a0a; /* Stesso sfondo scuro del resto del sito */
+    padding-bottom: 50px;
+}
+
+.gallery-item {
+    overflow: hidden;
+    border-radius: 5px; /* Angoli leggermente arrotondati */
+    height: 300px; /* Altezza fissa per tutte le celle */
+    border: 1px solid #333; /* Bordo sottile opzionale */
+}
+
+.gallery-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Fondamentale: taglia l'immagine per riempire il box senza deformarla */
+    transition: all 0.5s;
+}
+
+/* Effetto zoom quando passi sopra col mouse */
+.gallery-item:hover img {
+    transform: scale(1.1);
+}
+
 /* --- MEDIA QUERIES PER MOBILE --- */
 
 @media (max-width: 991px) {
