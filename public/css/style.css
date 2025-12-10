@@ -553,7 +553,6 @@
     color: #666; /* Leggermente più scuro per dare meno enfasi alla nota legale */
 }
 
-/* ... (codice precedente) ... */
 
 /* --- PAGE HEADER (Per pagine interne come Chi Siamo) --- */
 .page-header {
@@ -740,7 +739,7 @@
     margin-right: 8px;
 }
 
-/* Stile speciale per la lista a destra (Rossella) */
+/* Stile speciale per la lista a destra */
 .team-text.text-lg-end .team-skills li i {
     margin-right: 0;
     margin-left: 8px;
@@ -866,7 +865,22 @@
     .team-img-container {
         max-width: 400px;
         width: 100%;
+        
     }
+}
+
+/* Mappa */
+.map-container {
+    border: 2px solid #f4c269;
+    padding: 5px;
+    background: #151515;
+    width: 100%; /* Aggiungi questo per sicurezza */
+}
+
+/* Forza l'iframe a riempire il contenitore */
+.map-container iframe {
+    width: 100%;
+    display: block; /* Rimuove spazi bianchi extra sotto l'iframe */
 }
 
 /* --- MEDIA QUERIES PER MOBILE --- */
