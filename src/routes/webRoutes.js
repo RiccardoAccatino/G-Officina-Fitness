@@ -7,6 +7,6 @@ const pageController = require('../controllers/pageController');
 router.get('/', pageController.getHome);
 
 // Quando l'utente va su '/corsi'
-router.get('/corsi', pageController.getServices);
+router.get('/aboutus', pageController.getServices);
 
 module.exports = router;

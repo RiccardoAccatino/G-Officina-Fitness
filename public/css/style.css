@@ -553,6 +553,225 @@
     color: #666; /* Leggermente più scuro per dare meno enfasi alla nota legale */
 }
 
+/* ... (codice precedente) ... */
+
+/* --- PAGE HEADER (Per pagine interne come Chi Siamo) --- */
+.page-header {
+    background-image: url('/img/Palestra/IMG_1913.jpg'); /* Usiamo una foto della palestra scura */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    padding: 150px 0 80px 0;
+    position: relative;
+    margin-bottom: 0;
+}
+
+.page-header::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6); /* Più scuro per leggere il titolo */
+}
+
+.page-header .container {
+    position: relative;
+    z-index: 2;
+}
+
+.page-header h2 {
+    font-size: 48px;
+    color: #ffffff;
+    font-family: "Oswald", sans-serif;
+    font-weight: 700;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+}
+
+.header-breadcrumb a, .header-breadcrumb span {
+    color: #f4c269;
+    font-size: 16px;
+    text-transform: uppercase;
+    font-weight: 600;
+    text-decoration: none;
+    margin: 0 5px;
+}
+
+.header-breadcrumb span:last-child {
+    color: #c4c4c4;
+}
+
+/* --- ABOUT SECTION --- */
+.about-text span {
+    color: #f4c269;
+    font-size: 14px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    display: block;
+    margin-bottom: 10px;
+    font-family: "Oswald", sans-serif;
+}
+
+.about-text h2 {
+    color: #ffffff;
+    font-size: 36px;
+    font-family: "Oswald", sans-serif;
+    font-weight: 700;
+    text-transform: uppercase;
+    margin-bottom: 25px;
+}
+
+.about-text .lead {
+    color: #ffffff;
+    font-weight: 500;
+    margin-bottom: 15px;
+}
+
+.about-text p {
+    color: #c4c4c4;
+    font-size: 16px;
+    line-height: 26px;
+    margin-bottom: 20px;
+}
+
+.about-img {
+    border: 5px solid #1f1f1f;
+    border-radius: 2px;
+    overflow: hidden;
+}
+
+.about-img img {
+    width: 100%;
+    transition: all 0.5s;
+}
+
+.about-img:hover img {
+    transform: scale(1.05);
+}
+
+/* --- TEAM SECTION --- */
+.team-section {
+    background: #0a0a0a;
+}
+
+.team-img-container {
+    position: relative;
+    border: 2px solid #f4c269; /* Cornice dorata */
+    padding: 10px;
+    display: inline-block;
+    background: #151515;
+}
+
+.team-img {
+    width: 100%;
+    display: block;
+    filter: grayscale(20%); /* Leggero bianco e nero per stile */
+    transition: all 0.4s;
+}
+
+.team-img-container:hover .team-img {
+    filter: grayscale(0%); /* Colore al passaggio del mouse */
+}
+
+.team-role {
+    background: #f4c269;
+    color: #000;
+    font-family: "Oswald", sans-serif;
+    font-weight: 700;
+    text-transform: uppercase;
+    padding: 8px 20px;
+    position: absolute;
+    bottom: -15px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 14px;
+    white-space: nowrap;
+    box-shadow: 0 5px 10px rgba(0,0,0,0.5);
+}
+
+.team-text h3 {
+    color: #fff;
+    font-family: "Oswald", sans-serif;
+    font-weight: 700;
+    text-transform: uppercase;
+    font-size: 32px;
+    margin-bottom: 5px;
+}
+
+.team-text .subtitle {
+    display: block;
+    color: #f4c269;
+    font-size: 14px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 20px;
+    font-weight: 600;
+}
+
+.team-text p {
+    color: #c4c4c4;
+    margin-bottom: 15px;
+    line-height: 1.6;
+}
+
+.team-skills {
+    list-style: none;
+    padding: 0;
+    margin-top: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.team-skills li {
+    background: #1f1f1f;
+    padding: 8px 15px;
+    color: #fff;
+    font-size: 14px;
+    border-radius: 4px;
+    border: 1px solid #333;
+}
+
+.team-skills li i {
+    color: #f4c269;
+    margin-right: 8px;
+}
+
+/* Stile speciale per la lista a destra (Rossella) */
+.team-text.text-lg-end .team-skills li i {
+    margin-right: 0;
+    margin-left: 8px;
+}
+
+.team-divider {
+    border-top: 1px solid #333;
+    margin: 60px 0;
+    opacity: 0.5;
+}
+
+/* Mobile Adjustments per Team */
+@media (max-width: 991px) {
+    .team-row {
+        text-align: center !important;
+    }
+    .team-text {
+        padding-left: 0 !important;
+        padding-right: 0 !important;
+        margin-top: 30px;
+        text-align: center !important;
+    }
+    .team-skills {
+        justify-content: center !important;
+    }
+    .team-img-container {
+        max-width: 400px;
+        width: 100%;
+    }
+}
+
 /* --- MEDIA QUERIES PER MOBILE --- */
 
 @media (max-width: 991px) {

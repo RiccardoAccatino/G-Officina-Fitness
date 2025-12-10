@@ -6,8 +6,8 @@ const pageController = {
         });
     },
     getServices: (req, res) => {
-        res.render('public/services', { 
-            title: 'I Nostri Corsi',
+        res.render('public/aboutus', { 
+            title: 'Chi siamo',
             isHome: false
         });
     }
