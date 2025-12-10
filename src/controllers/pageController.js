@@ -10,7 +10,16 @@ const pageController = {
             title: 'Chi siamo',
             isHome: false
         });
+    },
+
+
+getContatti: (req, res) => {
+        res.render('public/contatti', { 
+            title: 'Contatatti',
+            isHome: false
+        });
     }
-};
+
+    };
 
 module.exports = pageController;

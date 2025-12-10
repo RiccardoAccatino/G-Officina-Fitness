@@ -9,4 +9,6 @@ router.get('/', pageController.getHome);
 // Quando l'utente va su '/corsi'
 router.get('/aboutus', pageController.getServices);
 
+router.get('/contatti', pageController.getContatti);
+
 module.exports = router;
