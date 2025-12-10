@@ -1,14 +1,12 @@
 const express = require('express');
 const router = express.Router();
-// Importiamo il controller che abbiamo appena creato
 const pageController = require('../controllers/pageController');
 
-// Quando l'utente va sulla pagina principale '/'
 router.get('/', pageController.getHome);
-
-// Quando l'utente va su '/corsi'
 router.get('/aboutus', pageController.getServices);
 
+// Rotte per i contatti
 router.get('/contatti', pageController.getContatti);
+router.post('/contatti', pageController.postContatti); // Nuova rotta POST
 
 module.exports = router;

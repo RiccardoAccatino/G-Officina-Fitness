@@ -12,6 +12,9 @@ app.set('views', path.join(__dirname, 'src', 'views'));
 // Rende pubblica la cartella 'public'
 app.use(express.static(path.join(__dirname, 'public')));
 
+// Middleware per leggere i dati dei form (POST)
+app.use(express.urlencoded({ extended: true }));
+
 // 3. Le Rotte (Le pagine del sito)
 const webRoutes = require('./src/routes/webRoutes');
 app.use('/', webRoutes);
