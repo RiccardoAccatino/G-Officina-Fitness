@@ -665,9 +665,12 @@
 }
 
 .team-img {
-    width: 100%;
-    display: block;
-    filter: grayscale(20%); /* Leggero bianco e nero per stile */
+    width: 100%;       /* Occupa tutta la larghezza del box */
+    height: auto;      /* L'altezza si calcola in automatico (NIENTE PIÙ TAGLI) */
+    display: block;    /* Rimuove spazi vuoti sotto l'immagine */
+    object-fit: contain; /* Assicura che l'immagine intera sia visibile */
+    max-height: 400px;
+    filter: grayscale(20%);
     transition: all 0.4s;
 }
 
@@ -921,3 +924,18 @@
         margin-bottom: 5px; /* Meno spazio sotto la scritta */
     }
 }
+
+.team-img-container {
+        max-width: 100%; 
+        width: 100%;
+        margin-bottom: 25px; /* Aumentiamo un po' lo spazio sotto per il TAG */
+        
+        /* IMPORTANTE: Rimuovi eventuali 'height' o 'overflow: hidden' se presenti qui */
+        height: auto; 
+        overflow: visible; 
+    }
+    
+    /* Questo serve per il rettangolino "OWNER & HEAD COACH" */
+    .team-role {
+        bottom: -20px; /* Spostiamo il tag un po' più giù se serve */
+    }
